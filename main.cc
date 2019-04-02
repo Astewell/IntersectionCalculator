@@ -1,28 +1,23 @@
 //main file
-#include <iostream>//for cin and cout
+#include <iostream>
 #include "fraction.cc"
 using namespace std;
 
 int main (void)
 {
     fraction fAx,fAy,fBx,fBy,fCx,fCy,fDx,fDy;
+    cout<<"This Program will Calculate the Intersection of 2 Line Segments you Input"<<endl;
+    cout<<"Each Line Segment is made of 2 Points"<<endl;
+    cout<<"Each Point is in the form of P(x y)"<<endl;
     cout<<"Enter Fractions in the form of integers [Numerator,Denominator]"<<endl;
-    cout<<"Enter a Fraction for Line Segment 1, Point Ax"<<endl;
-    cin>>fAx;
-    cout<<"Enter a Fraction for Line Segment 1, Point Ay"<<endl;
-    cin>>fAy;
-    cout<<"Enter a Fraction for Line Segment 1, Point Bx"<<endl;
-    cin>>fBx;
-    cout<<"Enter a Fraction for Line Segment 1, Point By"<<endl;
-    cin>>fBy;
-    cout<<"Enter a Fraction for Line Segment 2, Point Cx"<<endl;
-    cin>>fCx;
-    cout<<"Enter a Fraction for Line Segment 2, Point Cy"<<endl;
-    cin>>fCy;
-    cout<<"Enter a Fraction for Line Segment 2, Point Dx"<<endl;
-    cin>>fDx;
-    cout<<"Enter a Fraction for Line Segment 2, Point Dy"<<endl;
-    cin>>fDy;
+    cout<<"Enter Line Segment 1, Point A(x y)"<<endl;
+    cin>>fAx fAy;
+    cout<<"Enter Line Segment 1, Point B(x y)"<<endl;
+    cin>>fBx fBy;
+    cout<<"Enter Line Segment 2, Point C(x y)"<<endl;
+    cin>>fCx fCy;
+    cout<<"Enter Line Segment 2, Point D(x y)"<<endl;
+    cin>>fDx fDy;
     point p1(fraction fAx,fraction fAy);
     point p2(fraction fBx,fraction fBy);
     point q1(fraction fCx,fraction fCy);
@@ -37,11 +32,11 @@ int main (void)
     {
         if (Xt==0)
         {
-            cout<<"These Here Line Segments be Collinear"<<endl;
+            cout<<"Line Segments are Collinear"<<endl;
         }
         else
         {
-            cout<<"Them There Line Segments is Parallel"<<endl;
+            cout<<"Line Segments are Parallel"<<endl;
         }
     }
     else
@@ -50,19 +45,11 @@ int main (void)
         fraction U=Xu/Y;
         if (T>=0&&T<=1&&U>=0&&U<=1)
         {
-            cout<<"Line Segments Seem to Intersect at point "<<(p1+(R*T))<<endl;
-            cout<<"	               _        \n";
-            cout<<"               /(|       \n";
-            cout<<"              (  :       \n";
-            cout<<"            ___\  \______\n";
-            cout<<"          (____)   |     \n";
-            cout<<"         (____)    |     \n";
-            cout<<"          (____)   |     \n";
-            cout<<"           (___)__.|_____\n";
+            cout<<"Line Segments Intersect at Point "<<(p1+(R*T))<<endl;
         }
         else
         {
-            cout<< "Line Segments Don't Appear to Intersect"<<endl;
+            cout<< "Line Segments Don't Intersect"<<endl;
         }
     }
     return 0;
