@@ -3,7 +3,7 @@
 #include "fraction.h"
 
 //point properties
-point::point(fraction fracX,fraction fracY)//:: is a scope resolution operator/tells compiler that function is a member of a class
+point::point(fraction fracX,fraction fracY)
 {
     x=fracX;
     y=fracY;
