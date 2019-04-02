@@ -8,8 +8,8 @@ int main (void)
     fraction fAx,fAy,fBx,fBy,fCx,fCy,fDx,fDy;
     cout<<"This Program will Calculate the Intersection of 2 Line Segments you Input"<<endl;
     cout<<"Each Line Segment is made of 2 Points"<<endl;
-    cout<<"Each Point is in the form of P(x y)"<<endl;
-    cout<<"Enter Fractions in the form of integers [Numerator,Denominator]"<<endl;
+    cout<<"Each Point is in the form of P(x,y)"<<endl;
+    cout<<"Enter Fractions in the form of integers (Numerator,Denominator)"<<endl;
     cout<<"For Line Segment 1, Input Point Ax,y (X,'Enter',Y)"<<endl;
     cin>>fAx>>fAy;
     cout<<"For Line Segment 1, Input Point Bx,y (X,'Enter',Y)"<<endl;
